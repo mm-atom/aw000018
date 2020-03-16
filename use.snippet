@@ -3,7 +3,9 @@
 	 * ${0:变量注释}
 	 */
 	const r$CURRENT_SECONDS_UNIX = await(() => {
-		const p1 = $1;	// 参数注释
-		const p2 = $2;	// 参数注释
+		const p1 = 'zj-$1';	// 被调用的组件编号,如'zj-001','zj-002'
+		const p2 = 'a$2';	// 被调用组件的响应名，如'a001','a002
+		// const e1 = 'mmstudio';
+		// return aw18(p1, p2, e1, e2, ...); // 这里e1,e2,...为不固定个数参数，根据实际情况修改。在被调用组件的响应文件中，可以使用多个形（从第二个参数开始）参直接接收这些参数
 		return aw18(p1, p2);
 	})();
